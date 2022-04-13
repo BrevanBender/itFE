@@ -53,7 +53,22 @@ const Tripscontainer = ()=>{
         )
       }
 
-      
+      const deleteTrip = async (tripId)=>{
+        try{
+            
+            const apiResponse = await fetch(`${apiUrl}api/trips/${tripId}`,{
+            method: "DELETE",
+        })
+            const newTrips = trips.filter(trip=>trip.id !== tripId)
+            console.log(`After delete ${newTrips}`)
+            setTrips(
+                newTrips
+            )
+        }catch(err){
+
+            console.log(err)
+        }
+      }
 
     useEffect(() => {
         getTrips()}
@@ -65,7 +80,7 @@ const Tripscontainer = ()=>{
             <NewTrip createNewTrip={createNewTrip}></NewTrip>
             {trips.map((trip)=>{
                 return(
-                <IndiTrip updateTrip={updateTrip} trip={trip}></IndiTrip>
+                <IndiTrip deleteTrip={deleteTrip} updateTrip={updateTrip} trip={trip}></IndiTrip>
                 )
             })}
         </div>

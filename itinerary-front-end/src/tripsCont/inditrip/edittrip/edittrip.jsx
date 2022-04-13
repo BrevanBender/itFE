@@ -33,7 +33,7 @@ const EditTrip = (props)=>{
             <br />
             Activities: <input type='text' name='activities' onChange={handleInputChange} value={updateTrip.activities}></input>
             <br />
-            <button type="submit">Post Trip!</button>
+            <button type="submit">Update Trip!</button>
         </form>
     )
 }

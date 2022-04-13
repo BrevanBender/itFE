@@ -19,7 +19,7 @@ const IndiTrip = (props)=>{
             :
                 <EditTrip toggleEdit={toggleEdit} updateTrip={props.updateTrip} trip={props.trip}></EditTrip>
             }
-
+            <button onClick={()=>{props.deleteTrip(props.trip.id)}}>Delete Trip</button>
         </div>
     )
 }
