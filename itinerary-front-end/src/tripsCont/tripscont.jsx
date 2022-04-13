@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import apiUrl from "../apiconfig"
 
 const Tripscontainer = ()=>{
@@ -16,7 +16,11 @@ const Tripscontainer = ()=>{
 
 
     return (
-        <h1>Hello from Bali</h1>
+        <div>
+            {trips.map((trip)=>{
+                <IndiTrip trip={trip}></IndiTrip>
+            })}
+        </div>
     )
 }
 
