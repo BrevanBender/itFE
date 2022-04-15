@@ -8,14 +8,15 @@ const IndiTrip = (props)=>{
       }
     return(
         <div className="indiCont">
-            <h3>{props.trip.name}</h3>
-            <h4>{props.trip.duration}</h4>
-            <p>{props.trip.overview}</p>
-            <p>{props.trip.activities}</p>
-            <br />
+            <div>
+                <h3>{props.trip.name}</h3>
+                <h4>{props.trip.duration}</h4>
+                <p>{props.trip.overview}</p>
+                <p>{props.trip.activities}</p>
+            </div>  
 
             {!showEdit?
-                <button onClick={toggleEdit}></button>
+                <button onClick={toggleEdit}>Edit This <Trip></Trip></button>
             :
                 <EditTrip toggleEdit={toggleEdit} updateTrip={props.updateTrip} trip={props.trip}></EditTrip>
             }

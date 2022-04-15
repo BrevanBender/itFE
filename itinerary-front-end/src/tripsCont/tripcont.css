@@ -7,6 +7,6 @@
     display: flex;
     align-content: flex-start;
 }
-#container .indiCont:nth-of-type(2n){
+#container .indiCont:nth-of-type(even){
     align-content: flex-end;
 }
