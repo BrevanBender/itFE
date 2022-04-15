@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import apiUrl from "../apiconfig"
 import IndiTrip from "./inditrip/inditrip"
 import NewTrip from "./newtrip/newtrip"
+import './tripcont.css'
 
 const Tripscontainer = ()=>{
     const [trips, setTrips] = useState([])
@@ -76,7 +77,8 @@ const Tripscontainer = ()=>{
 
 
     return (
-        <div>
+        <div id="container">
+          <h2>Trips Planned: </h2>
             <NewTrip createNewTrip={createNewTrip}></NewTrip>
             {trips.map((trip)=>{
                 return(
