@@ -1,5 +1,6 @@
 import { useState } from "react"
 import EditTrip from "./edittrip/edittrip"
+import './inditrip.css'
 
 const IndiTrip = (props)=>{
     const [showEdit, setShowEdit] = useState(false)
@@ -14,13 +15,14 @@ const IndiTrip = (props)=>{
                 <p>{props.trip.overview}</p>
                 <p>{props.trip.activities}</p>
             </div>  
-
-            {!showEdit?
-                <button onClick={toggleEdit}>Edit This <Trip></Trip></button>
-            :
-                <EditTrip toggleEdit={toggleEdit} updateTrip={props.updateTrip} trip={props.trip}></EditTrip>
-            }
-            <button onClick={()=>{props.deleteTrip(props.trip.id)}}>Delete Trip</button>
+            <div id="buttonsDiv">
+                {!showEdit?
+                    <button onClick={toggleEdit}>Edit This Trip</button>
+                :
+                    <EditTrip toggleEdit={toggleEdit} updateTrip={props.updateTrip} trip={props.trip}></EditTrip>
+                }
+                <button onClick={()=>{props.deleteTrip(props.trip.id)}}>Delete Trip</button>
+            </div>
         </div>
     )
 }

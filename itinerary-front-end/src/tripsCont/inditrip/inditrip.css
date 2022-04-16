@@ -1,0 +1,16 @@
+.indiCont{
+    display: flex;
+    align-items: flex-end;
+    width: 80vw;
+    justify-content: space-evenly;
+}
+
+.indiCont:nth-of-type(odd){
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+}
+#buttonsDiv{
+    display: flex;
+    flex-direction: column;
+}
