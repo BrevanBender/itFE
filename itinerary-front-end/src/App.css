@@ -1,38 +1,91 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-image: url('./grass.jpg');
+  background-size: 200% 200%;
+  background-position: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  height: 9vh;
+  background-color: darkslategray;
+  top: -2vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.hidden{
+  opacity: .3;
+}
+.found{
+  opacity: 1;
+}
+header img{
+  height: 7vh;
+}
+#plane{
+  animation: fly 15s linear infinite;
+}
+@keyframes fly {
+  25%{
+    transform: translateX(-15vw) scaleX(1);
+  }
+  50%{
+    transform: translateX(-30vw) scaleX(1);
+  }
+  51%{
+    transform: translateX(-30vw) scaleX(-1);
+  }
+  75%{
+    transform: translateX(-15vw) scaleX(-1);
+  }
+  99%{
+    transform: translateX(0) scaleX(-1);
+  }
+  100%{
+    transform: scaleX(1);
+  }
+  
+}
+#rightSide{
+  display: flex;
+  color: pink;
+}
+#eggCont{
+  position: absolute;
+}
+.eggToFind{
+  height: 7vh;
+  opacity: 0;
+  cursor: pointer;
+}
+#eggCont img:hover{
+  opacity: 1;
+}
+#egg1{
+  position: relative;
+  top: 62vh;
+  left: 10vw;
+}
+#egg2{
+  position: relative;
+  top: 8vh;
+}
+#egg3{
+  position: relative;
+  top: 50vh;
+  left: 78vw;
+}
+.found{
+  opacity: 1;
+  height: 7vh;
+}
+#secret{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -7,8 +7,8 @@
     left: 33.5vw;
     top: 12.5vh;
     border-radius: 15px;
-    background: linear-gradient(-45deg, #82a8a6, #4b4da0, #4a226b, #3ea4be, #338055);
-    animation: gradient 11s ease infinite;
+    background: linear-gradient(-45deg, aquamarine, pink);
+    animation: gradient 5s ease infinite;
     background-size: 500% 500%;
     display: flex;
     flex-direction: column;

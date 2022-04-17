@@ -11,9 +11,9 @@ const IndiTrip = (props)=>{
         <div className="indiCont">
             <div>
                 <h3>{props.trip.name}</h3>
-                <h4>{props.trip.duration}</h4>
-                <p>{props.trip.overview}</p>
-                <p>{props.trip.activities}</p>
+                <h4>Duration: {props.trip.duration}</h4>
+                <p>Summary: {props.trip.overview}</p>
+                <p>Plans: {props.trip.activities}</p>
             </div>  
             <div id="buttonsDiv">
                 {!showEdit?

@@ -1,14 +1,17 @@
 .indiCont{
     display: flex;
     align-items: flex-end;
-    width: 80vw;
+    width: 50vw;
     justify-content: space-evenly;
+    background-color: pink;
+    margin: 10px auto;
 }
 
 .indiCont:nth-of-type(odd){
     display: flex;
     flex-direction: row-reverse;
     text-align: end;
+    background-color: aquamarine;
 }
 #buttonsDiv{
     display: flex;
